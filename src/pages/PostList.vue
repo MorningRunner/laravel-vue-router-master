@@ -8,15 +8,19 @@
     </div>
     <nav aria-label="Page navigation example">
       <ul class="pagination">
+
         <li class="page-item" :class="{'disabled' : currentPage === 1}">
           <button class="page-link" :disabled="currentPage === 1" @click="getPosts(currentPage - 1)">Previous</button>
         </li>
+
         <li class="page-item" v-for="n in lastPage">
           <button class="page-link" @click="getPosts(n)">{{ n }}</button>
         </li>
+
         <li class="page-item" :class="{'disabled' : currentPage === lastPage}">
           <button class="page-link" :disabled="currentPage === lastPage" @click="getPosts(currentPage + 1)">Next</button>
         </li>
+
       </ul>
     </nav>
   </section>
@@ -48,10 +52,10 @@
               page: pagenum
             }}).then((response)=>{
               // console.log(response.data);
-              this.posts = response.data.results.data;
+              this.posts       = response.data.results.data;
               this.currentPage = response.data.results.current_page;
-              this.lastPage = response.data.results.last_page;
-              this.totalPages = response.data.results.total_pages;
+              this.lastPage    = response.data.results.last_page;
+              this.totalPages  = response.data.results.total_pages;
             })
           }
         },

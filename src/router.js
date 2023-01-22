@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory} from 'vue-router';
 
-import HomePage from './pages/HomePage.vue';
-import PostList from './pages/PostList.vue';
-import NotFound from './pages/NotFound.vue';
+import HomePage   from './pages/HomePage.vue';
+import PostList   from './pages/PostList.vue';
+import NotFound   from './pages/NotFound.vue';
 import SinglePost from './pages/SinglePost.vue';
-import AboutUs from './pages/AboutUs.vue';
-import ContactUs from './pages/ContactUs.vue';
+import AboutUs    from './pages/AboutUs.vue';
+import ContactUs  from './pages/ContactUs.vue';
 
 
 const router = createRouter({
